@@ -1,0 +1,11 @@
+<!-- Interpolation binding -->
+<p>{{name}}</p>
+<p>{{obHocVien.hoTen}} {{obHocVien.age}}</p>
+<!-- Property binding -->
+<p [innerHTML]="name"></p>
+<p [innerHTML]="obHocVien.age +'kha dep trai' +obHocVien.hoTen"></p>
+
+
+<input type="text" inputName="khaInput" #obInput>
+<!-- EventBinding -->
+<button (click)="ChangeName(obInput)">Click</button>

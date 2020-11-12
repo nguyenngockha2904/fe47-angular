@@ -1,0 +1,29 @@
+//1
+first 
+//2
+baitap1 
+	làm quen với tạo component. 
+	dàn layout set cứng bootstrap vào app.
+//3
+layout 
+	làm quen với module 
+//4 
+one-way-binding
+	binding dự liệu theo kiểu 1 chiều
+ 	từ model ra view
+	ví dụ interpolation binding
+	ví dụ property binding 
+	ví dụ eventBinding
+//5
+two-way-binding 
+	sử dụng FormModule từ @angular/forms
+	sử dụng [(ngModel)] để twoway binding
+	binding từ model ra view  
+		từ view ra model
+//6
+bai-tap-binding
+	luyện tập, làm quen với 2 kiểu binding 
+		oneway binding.
+		twoway binding.
+//7 directive 
+	
