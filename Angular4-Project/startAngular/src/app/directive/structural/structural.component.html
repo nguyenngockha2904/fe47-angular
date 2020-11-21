@@ -1,0 +1,95 @@
+<p class="h1 text-center">structural works!</p>
+<!-- *ngIf -->
+<div class="py-5">
+    <h4 class="my-5">demo *ngif</h4>
+    <p *ngIf="boolean_text_ngIf">kha dep trai</p>
+    <button class="btn btn-primary" type="button" (click)="toggleStatus()">Toogle</button>
+</div>
+
+<!-- ng-template -->
+<div class="py-5">
+    <h4 class="my-5">demo ng-template</h4>
+    <div class="w-50 m-auto" style="height: 70vh;" *ngIf="islogined; else formDangNhap">
+        Your Info:
+        <p><b>Email : </b> {{credentials.email}}</p>
+        <p><b>password : </b> {{credentials.password}}</p>
+        <button class="btn btn-warning" (click)="handleDangXuat()">Đăng xuất</button>
+    </div>
+    <ng-template #formDangNhap>
+        <div class="w-50 m-auto">
+            <h4 class="text-center">Form login</h4>
+            <form>
+                <div class="form-group">
+                    <p class="h5">Email</p>
+                    <input type="text" class="form-control" #email required>
+                </div>
+                <div class="form-group">
+                    <p class="h5">Password</p>
+                    <input type="password" class="form-control" #password required>
+                </div>
+                <button type="submit" class="btn btn-success"
+                    (click)="handleDangNhap({email:email.value,password:password.value})">Đăng
+                    nhập</button>
+            </form>
+        </div>
+    </ng-template>
+</div>
+
+<!-- ng switch case -->
+<div>
+    <p class="h4">demo ng switch case</p>
+    <div class="w-50 m-auto py-5">
+        <div class="form-group">
+            <label>Color</label>
+            <select class="form-control" #cl (change)="changeColor(cl.value)">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+        <div [ngSwitch]="color">
+            <div *ngSwitchCase="'red'" style="background-color: red; color: #FFF;">Màu đỏ</div>
+            <div *ngSwitchCase="'blue'" style="background-color: blue; color: #fff;">Màu xanh</div>
+            <div *ngSwitchCase="'yellow'" style="background-color: yellow;color: #000000;">Màu vàng</div>
+            <div *ngSwitchDefault style="background-color: orange; color: #fff;">Màu mặc định</div>
+        </div>
+    </div>
+</div>
+
+<!-- *ngFor -->
+<div>
+
+    <p class="h4">demo *ngFor</p>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>stt</th>
+                    <th>Họ tên</th>
+                    <th>Tuổi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of listStudent; let stt =index">
+                    <td scope="row">{{stt+1}}</td>
+                    <td>{{st.name}}</td>
+                    <td>{{st.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" placeholder="Nguyễn Văn ..." required #txtNameStudent>
+            </div>
+            <div class="form-group">
+                <label for="">age</label>
+                <input type="number" class="form-control" placeholder="18" required #txtAgeStudent>
+            </div>
+            <button type="button" class="btn btn-success"
+                (click)="handleAddStudent({name:txtNameStudent.value,age:txtAgeStudent.value})">Add</button>
+        </form>
+
+    </div>
+
+</div>

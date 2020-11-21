@@ -26,4 +26,12 @@ bai-tap-binding
 		oneway binding.
 		twoway binding.
 //7 directive 
-	
+	structural *ngIf, [ngSwitch], *ngFor:  
+		demo *ngIf 
+		demo *ngIf ng-template thông qua bài đăng nhập đăng xuất .
+		demo [ngSwitch] thông qua bài chọn màu 
+		demo *ngFor thông qua bài thêm sinh viên
+	attribute [ngClass] , custom attribute directive:
+		demo [ngClass] với bài tập highLine Text
+		custom attribute directive : tại app tạo ra module my-directive
+			tạo một directive bằng cú pháp ng g  d tenDirective 

@@ -9,6 +9,7 @@ import { OneWayBindingModule } from './one-way-binding/one-way-binding.module';
 import { TwoWayBindingModule } from './two-way-binding/two-way-binding.module';
 import { BaiTapBindingModule } from './bai-tap-binding/bai-tap-binding.module';
 import { DirectiveModule } from './directive/directive.module';
+import { MyDirectiveModule } from './my-directive/my-directive.module';
 @NgModule({
   declarations: [AppComponent, FirstComponent],
   imports: [
@@ -20,6 +21,7 @@ import { DirectiveModule } from './directive/directive.module';
     TwoWayBindingModule,
     BaiTapBindingModule,
     DirectiveModule,
+    MyDirectiveModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

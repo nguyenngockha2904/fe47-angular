@@ -1,0 +1,19 @@
+<p class="h3">attribute works!</p>
+
+<!-- [ngClass] -->
+<p class="h4">demo [ngClass]</p>
+<div [ngClass]="{highLight:isHighLight}">Nguyễn ngọc kha</div>
+<button class="btn" [ngClass]="{'btn-primary':!isHighLight, 'btn-warning':isHighLight}"
+    (click)="handleToogleHighLightAttribute()">
+    <p *ngIf="isHighLight;else toogleHighLightText">Off</p>
+    <ng-template #toogleHighLightText>
+        <p>On</p>
+    </ng-template>
+</button>
+
+<!-- custome directive -->
+<p appHightlight>Custom directive</p>
+
+<div appBetterHightlight>hs</div>
+
+<button class="btn" appButtonHover>Kha</button>
