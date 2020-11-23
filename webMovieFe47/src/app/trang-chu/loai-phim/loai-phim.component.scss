@@ -1,0 +1,9 @@
+.btn {
+  background: transparent;
+  border: none;
+  color: black;
+  &.active {
+    font-weight: 600;
+    color: red;
+  }
+}

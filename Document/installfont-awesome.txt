@@ -1,0 +1,6 @@
+npm i font-awesome angular-font-awesome -S
+
+
+"styles":[
+"node_modules/font-awesome/css/font-awesome.min.css",
+]

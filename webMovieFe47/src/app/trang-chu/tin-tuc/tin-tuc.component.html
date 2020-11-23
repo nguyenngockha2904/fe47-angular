@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <button class="btn btn-success mr-2" [ngClass]="{'btn-success':isTab=='dienAnh'}"
+            (click)="handleChangeTab('dienAnh')">Điện
+            ảnh</button>
+        <button class="btn mr-2" [ngClass]="{'btn-success':isTab=='review'}"
+            (click)="handleChangeTab('review')">Review</button>
+        <button class="btn" [ngClass]="{'btn-success':isTab=='khuyenMai'}" (click)="handleChangeTab('khuyenMai')">Khuyến
+            mãi</button>
+    </div>
+</div>
+<div class="row" [ngSwitch]="isTab">
+    <div *ngSwitchCase="'dienAnh'" class="col-12">
+        <app-dien-anh></app-dien-anh>
+    </div>
+    <div *ngSwitchCase="'review'" class="col-12">
+        <app-review></app-review>
+    </div>
+    <div *ngSwitchCase="'khuyenMai'" class="col-12">
+        <app-khuyen-mai></app-khuyen-mai>
+    </div>
+</div>
